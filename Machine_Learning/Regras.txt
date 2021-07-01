@@ -1,0 +1,11 @@
+          Sistema de Combate
+
+Atributos: Vida | Ataque | Defesa
+
+-> Somados devem resultar em <=18 pontos
+
+
+Torneios:
+
+-> Vida==0 : Morre
+-> Vencedor regenera a vida ao valor inicial
