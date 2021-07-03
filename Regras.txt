@@ -1,0 +1,13 @@
+          Sistema de Combate
+
+Atributos: Vida | Ataque | Defesa
+
+-> Somados devem resultar em <=18 pontos
+
+
+Batalhas:
+
+-> Dano = Diferença do ataque e defesa, sendo que cada um ataca em um turno(o primeiro é decidido aleatóriamente), 
+e se a defesa for maior que o ataque do atacante o Dano = diferença entra defesa e ataque. Se a diferença for 0, Dano = 1.
+-> Vida==0 : Morre
+-> Vencedor regenera a vida ao valor inicial
