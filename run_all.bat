@@ -13,7 +13,7 @@ treinar_modelo.exe
 @echo Ok.
 cd ..\graficos\
 @echo Plotando Graficos:
-py -3.7-64 graficos_dispersao.py
+py graficos_dispersao.py
 cd ..\
 @echo Ok.
 
@@ -41,7 +41,7 @@ del vencedor.txt
 cd ..\graficos\
 
 @echo Gerando Graficos:
-py -3.7-64 graficos_populacao.py
+py graficos_populacao.py
 @echo Ok.
 
 cd ../
