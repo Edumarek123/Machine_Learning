@@ -4,3 +4,5 @@ Testando data cience em C e gerando gráficos em Phyton. A partir dos dados reso
 
 Auor: Eduardo Marek
 Data: 07/2021
+
+Irei melhorar o algoritmo deste código, talvez mudá-lo para python
