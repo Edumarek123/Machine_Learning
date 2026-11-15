@@ -2,73 +2,84 @@
 
 # Machine Learning — Regression & Simulation
 
-**An experimental workflow connecting data, multivariable regression, and simulation.**
+**An experimental workflow combining data processing, multivariable regression, and simulation.**
 
 ![Languages](https://img.shields.io/badge/languages-C%20%7C%20Python-3776AB)
-![Topics](https://img.shields.io/badge/topics-regression%20%7C%20simulation-6f42c1)
-![Status](https://img.shields.io/badge/status-in%20progress-orange)
+![Methods](https://img.shields.io/badge/method-multivariable%20regression-6f42c1)
+![Status](https://img.shields.io/badge/status-experimental-orange)
 
 </div>
 
+## Contents
+
+- [Overview](#overview)
+- [Workflow](#workflow)
+- [Repository structure](#repository-structure)
+- [Technologies](#technologies)
+- [Run the project](#run-the-project)
+- [Current limitations](#current-limitations)
+- [Recommended experiment records](#recommended-experiment-records)
+- [License](#license)
+
 ## Overview
 
-This repository contains an exploratory data-science project that uses prepared data to calculate a multivariable linear-regression model, with the intention of supporting an optimization-oriented simulation.
+This repository is an exploratory project connecting data processing, multivariable linear regression, and a simulation workflow. It contains separate directories for data, graph outputs, model training, simulation, and supporting code.
 
-The project is organized as a workflow rather than a single standalone script: data, model training, simulation, supporting code, and graph outputs are kept in separate areas.
+The repository also includes a rules document describing a simple combat-system model with health, attack, and defense attributes. The project is therefore best presented as an experimental study rather than a finished machine-learning product.
 
 ## Workflow
 
-1. **Data** — store and prepare the input data.
-2. **Model training** — calculate a multivariable regression model.
-3. **Simulation** — use model output in the simulation workflow.
-4. **Visualization** — generate graphs to inspect results.
+```mermaid
+flowchart TD
+    A[Input data] --> B[Data preparation]
+    B --> C[Model training]
+    C --> D[Regression output]
+    D --> E[Simulation]
+    E --> F[Graphs / analysis]
+```
+
+The diagram summarizes the intended workflow from the repository structure. Exact data schemas and the current handoff between components should be confirmed in the source files.
 
 ## Repository structure
 
 ```text
-.
-├── dados/              # Input data
+Machine_Learning/
+├── dados/              # Data files
 ├── graficos/           # Graph outputs
 ├── simulador/          # Simulation components
 ├── treinar_modelo/     # Model-training components
 ├── rpglib/             # Supporting library
-├── main.cpp            # Main C entry point (as named in repository)
+├── main.cpp            # Main source file
 ├── Model Diagram.pdf   # Model diagram
-├── Regras.txt          # Project notes / rules
-└── run_all.bat         # Workflow helper
+├── Regras.txt          # Combat-system rules
+└── run_all.bat         # Windows workflow script
 ```
 
-## Technologies and methods
+## Technologies
 
-- C
+- C / C++
 - Python
 - Multivariable linear regression
-- Data-driven simulation
-- Graph-based result inspection
+- Data visualization and simulation
 
-## Running the project
+## Run the project
 
-The repository includes a Windows batch helper named `run_all.bat`. Review its commands and required paths before execution:
+A Windows helper named `run_all.bat` is included. Review its commands and required paths before execution:
 
 ```bat
 run_all.bat
 ```
 
-The project contains multiple components, so dependencies and execution order should be confirmed from the scripts in each folder.
+The repository is composed of multiple components; dependencies and execution order should be checked in the individual scripts. A clean, cross-platform setup procedure is not currently documented.
 
-## Development status
+## Current limitations
 
-The original development notes describe the project as ongoing and not yet optimized. They also identify memory-leak checking and broader validation as outstanding work.
+The original project notes identify optimization and memory-leak checking as unfinished work. The repository does not currently provide a reproducible experiment configuration, a documented dataset schema, or a formal evaluation report.
 
-For that reason, this repository should be treated as an experimental study, not as a validated optimization engine.
+## Recommended experiment records
 
-## Potential next steps
-
-- Document the dataset schema and preprocessing
-- Record model inputs, outputs, and evaluation metrics
-- Add reproducible experiment configurations
-- Validate memory usage and numerical behavior
+For future comparisons, record the input dataset, feature definitions, preprocessing, train/test strategy, model coefficients, evaluation metric, simulation parameters, and generated output files.
 
 ## License
 
-No license file was identified in the repository at the time of writing. Contact the author before redistributing or reusing the project.
+No `LICENSE` file is currently included. Unless a license is added, reuse and redistribution permissions are not granted by this repository.
